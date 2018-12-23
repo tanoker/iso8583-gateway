@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE isopackager PUBLIC
+        "-//jPOS/jPOS Generic Packager DTD 1.0//EN"
+        "http://jpos.org/dtd/generic-packager-1.0.dtd">
+<isopackager>
+  <isofield id="0" length="4" name="MessageTypeIndicator" class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield id="1" length="64" name="BitMap" class="org.jpos.iso.IFA_BITMAP"/>
+  <isofield id="2" length="20" name="PrimaryAccountNumber" class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield id="3" length="6" name="ProcessingCode" class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield id="7" length="10" name="TransmissionDateAndTime" class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield id="18" length="4" name="MerchantType" class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield id="32" length="9" name="AcquiringInstIDCode" class="org.jpos.iso.IFA_LCHAR"/>
+  <isofield id="52" length="8" name="PersonalIdentificationNumberData" class="org.jpos.iso.IFA_BINARY"/>
+  <isofield id="53" length="16" name="SecurityRelatedControlInformation" class="org.jpos.iso.IFA_NUMERIC"/>
+</isopackager>
