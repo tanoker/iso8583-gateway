@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE isopackager SYSTEM "genericpackager.dtd">
+<isopackager>
+	<isofield id="0" length="4" name="MessageTypeIndicator" class="org.jpos.iso.IFA_NUMERIC"/>
+	<isofield id="1" length="64" name="BitMap" class="org.jpos.iso.IFA_BITMAP"/>
+    <isofield id="3" length="6" name="ProcessingCode" class="org.jpos.iso.IFA_NUMERIC"/>
+	<isofield id="7" length="10" name="TransmissionDateAndTime" class="org.jpos.iso.IFA_NUMERIC"/>
+	<isofield id="44" length="25" name="ResponseCode" class="org.jpos.iso.IFA_LLCHAR"/>
+	<isofield id="115" length="999" name="MessageId" class="org.jpos.iso.IFA_LLLCHAR"/>
+	<isofield id="116" length="999" name="OriginalMessageId" class="org.jpos.iso.IFA_LLLCHAR"/>
+    <isofield id="123" length="999" name="SessionId" class="org.jpos.iso.IFA_LLLCHAR"/>
+</isopackager>

@@ -32,7 +32,6 @@ public class ISO8583Parser {
 			return toReturn;
 		} catch (ISOException e) {
 			System.out.println(e.getMessage());
-			e.printStackTrace();
 		}
 		return null;		
 	}
