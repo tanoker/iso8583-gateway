@@ -17,7 +17,7 @@ public class ISO8583Generator {
 	/**
 	 * 
 	 * @param message java.util.Map Contains fields values for ISO8583 message. Every key is of the form FieldX where X is a number of the field.
-	 * @return Message in ISO8583 format
+	 * @return String message in ISO8583 format
 	 */
 	public String generateMessage(Map<Object, Object> message) {
 		try {

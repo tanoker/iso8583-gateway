@@ -10,14 +10,26 @@ import com.neobns.atm.gateway.model.Card;
 import com.neobns.atm.gateway.service.CardService;
 import com.neobns.atm.gateway.utils.ISO8583Generator;
 
+/**
+ * 
+ * @author Pavel Gaiduk
+ * Class providing functionality to generate 0110 response for given Card object
+ */
 public class VerifyPINMessageProcessor implements Processor {
 
 	private CardService cardService;
 	
+	/**
+	 * 
+	 * @param cardService CardService object to get Card obejcts
+	 */
 	public VerifyPINMessageProcessor(CardService cardService) {
 		this.cardService = cardService;
 	}
 	
+	/**
+	 * Method processes the camel exchange with Card object in body. Generates 0110 response as out body.
+	 */
 	public void process(Exchange exchange) throws Exception {
 		Map<Object, Object> response = new HashMap<Object, Object>();
 		Card card = exchange.getIn().getBody(Card.class);

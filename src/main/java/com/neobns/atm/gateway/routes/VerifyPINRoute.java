@@ -12,12 +12,20 @@ import com.neobns.atm.gateway.processors.ISO8583ParserProcessor;
 import com.neobns.atm.gateway.processors.VerifyPINMessageProcessor;
 import com.neobns.atm.gateway.service.CardService;
 
+/**
+ * 
+ * @author Pavel Gaiduk
+ * Class contains definitions of the camel routes for receive ISO8583 messages as bytes and validate PIN
+ */
 @Component
 public class VerifyPINRoute extends RouteBuilder {
 
 	@Autowired
 	CardService cardService;
 	
+	/**
+	 * Method confgiures the camel routes
+	 */
 	@SuppressWarnings("unused")
 	@Override
 	public void configure() throws Exception {

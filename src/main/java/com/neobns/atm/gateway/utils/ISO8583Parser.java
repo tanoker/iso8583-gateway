@@ -17,7 +17,7 @@ public class ISO8583Parser {
 	/**
 	 * 
 	 * @param data String representation of the ISO8583 message.
-	 * @return com.neobns.atm.gateway.model.Card object containing parsed PAN and PIN.
+	 * @return com.neobns.atm.gateway.model.Card object including parsed PAN and PIN.
 	 */
 	public Card parseISOMessageByJPOS(String data) {
 		try {

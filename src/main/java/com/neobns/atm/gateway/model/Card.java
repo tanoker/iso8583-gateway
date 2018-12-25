@@ -6,6 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author Pavel Gaiduk
+ * The {@code Card} class is the entity for Card table
+ */
 @Entity(name="Card")
 @Table(name="Card")
 public class Card {
