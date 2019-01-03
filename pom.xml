@@ -17,7 +17,7 @@
 		<jpos.version>1.9.0</jpos.version>
 		<codecs.version>1.11</codecs.version>
 		<junit.version>3.8.1</junit.version>
-		<h2.version>1.4.193</h2.version>
+		<h2.version>1.4.194</h2.version>
 	</properties>
 
 	<build>
