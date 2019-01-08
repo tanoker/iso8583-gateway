@@ -46,7 +46,7 @@ public class VerifyPINMessageProcessor implements Processor {
 			}
 			exchange.getOut().setBody(new ISO8583Generator().generateMessage(response));
 		} else {
-			exchange.getOut().setBody(null);
+			exchange.getOut().setBody("\r\n");
 		}
 	}
 

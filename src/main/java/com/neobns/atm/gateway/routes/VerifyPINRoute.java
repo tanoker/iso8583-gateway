@@ -1,10 +1,8 @@
 package com.neobns.atm.gateway.routes;
 
-import org.apache.camel.CamelContext;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.impl.DefaultCamelContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,14 +25,13 @@ public class VerifyPINRoute extends RouteBuilder {
 	/**
 	 * Method confgiures the camel routes
 	 */
-	@SuppressWarnings("unused")
 	@Override
 	public void configure() throws Exception {
-		CamelContext context = new DefaultCamelContext();
+		
 		Processor pinValidator = new VerifyPINMessageProcessor(cardRepository);
 		Processor iso8583parser = new ISO8583ParserProcessor();
 		Processor invalidProcessor = new InvalidMessageProcessor();
-
+		
 		from("netty4:tcp://localhost:9090?textline=true")
 			.log(LoggingLevel.INFO, "Start flow. Incoming message: ${body}")
 			.process(iso8583parser)
@@ -47,7 +44,7 @@ public class VerifyPINRoute extends RouteBuilder {
 					.log(LoggingLevel.INFO, "Unhandable message received")
 					.process(invalidProcessor)
 			.end()
-			.log(LoggingLevel.INFO, "End Flow")
+			.log(LoggingLevel.INFO, "End Flow. Outgoing message: ${body}")
 		.end();
 
 		from("direct:validatePIN")

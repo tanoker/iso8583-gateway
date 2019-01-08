@@ -33,11 +33,11 @@ public class ISO8583Generator {
 				}
 			}
 			byte[] bytes = isoMsg.pack();
-			return new String(bytes);
+			return new String(bytes).concat("\r\n");
 		} catch (ISOException e) {
 			System.out.println(e.getMessage());
 		}
-		return null;		
+		return "\r\n";		
 	}
 
 }
